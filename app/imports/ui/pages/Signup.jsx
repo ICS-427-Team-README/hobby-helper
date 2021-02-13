@@ -67,6 +67,16 @@ class Signup extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                 />
+                <Form.Input
+                  label="Re-enter Password"
+                  id="signup-form-password"
+                  icon="lock"
+                  iconPosition="left"
+                  name="password"
+                  placeholder="Re-enter Password"
+                  type="password"
+                  onChange={this.handleChange}
+                  />
                 <Form.Button id="signup-form-submit" content="Submit"/>
               </Segment>
             </Form>
