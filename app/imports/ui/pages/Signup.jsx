@@ -48,14 +48,30 @@ class Signup extends React.Component {
             <Form onSubmit={this.submit}>
               <Segment stacked>
                 <Form.Input
-                  label="Email"
-                  id="signup-form-email"
-                  icon="user"
-                  iconPosition="left"
-                  name="email"
-                  type="email"
-                  placeholder="E-mail address"
-                  onChange={this.handleChange}
+                    label="Email"
+                    id="signup-form-email"
+                    icon="user"
+                    iconPosition="left"
+                    name="email"
+                    type="email"
+                    placeholder="E-mail address"
+                    onChange={this.handleChange}
+                />
+                <Form.Input
+                    label="First Name"
+                    id="signup-form-firstName"
+                    name="firstName"
+                    type="firstName"
+                    placeholder="First Name"
+                    onChange={this.handleChange}
+                />
+                <Form.Input
+                    label="Last Name"
+                    id="signup-form-lastName"
+                    name="lastName"
+                    type="lastName"
+                    placeholder="Last Name"
+                    onChange={this.handleChange}
                 />
                 <Form.Input
                   label="Password"
@@ -77,6 +93,9 @@ class Signup extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                   />
+                  <Form.Field>
+                    <Form.Checkbox id='signup-form-terms' label='I agree to the Terms and Conditions' />
+                  </Form.Field>
                 <Form.Button id="signup-form-submit" content="Submit"/>
               </Segment>
             </Form>
