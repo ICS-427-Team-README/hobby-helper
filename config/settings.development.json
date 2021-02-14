@@ -9,5 +9,14 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultHobby": [
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "WandaVision", "status": 1, "description": "Marvel TV Show" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Game of Thrones", "status": 2, "description": "Dramatic" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Falcon and The Winter Soldier", "status": 2, "description": "Buddy Cop" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Loki", "status": 1, "description": "Crime Thriller" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "What If", "status": 1, "description": "Animation" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Bridgerton", "status": 3, "description": "British" }
   ]
 }

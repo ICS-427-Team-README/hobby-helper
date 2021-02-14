@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
+import { HobbyItems } from '../../api/HobbyItems/HobbyItems.js';
 
 /* eslint-disable no-console */
 
@@ -9,10 +10,24 @@ function addData(data) {
   Stuffs.collection.insert(data);
 }
 
+/** Initialize the database with a default data document. */
+function addHobby(data) {
+  console.log(`  Adding: ${data.name} (${data.owner})`);
+  HobbyItems.collection.insert(data);
+}
+
 /** Initialize the collection if empty. */
 if (Stuffs.collection.find().count() === 0) {
   if (Meteor.settings.defaultData) {
     console.log('Creating default data.');
     Meteor.settings.defaultData.map(data => addData(data));
+  }
+}
+
+/** Initialize the collection if empty. */
+if (HobbyItems.collection.find().count() === 0) {
+  if (Meteor.settings.defaultHobby) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultHobby.map(data => addHobby(data));
   }
 }
