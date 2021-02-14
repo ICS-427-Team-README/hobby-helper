@@ -23,7 +23,8 @@ class ListStuff extends React.Component {
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Hobby Name</Table.HeaderCell>
-                <Table.HeaderCell>Quantity</Table.HeaderCell>
+                <Table.HeaderCell>Last Modified</Table.HeaderCell>
+                <Table.HeaderCell>View Statistics</Table.HeaderCell>
                 <Table.HeaderCell>Edit</Table.HeaderCell>
                 <Table.HeaderCell>Remove</Table.HeaderCell>
               </Table.Row>

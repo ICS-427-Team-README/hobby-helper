@@ -12,9 +12,12 @@ class StuffItem extends React.Component {
     return (
         <Table.Row>
           <Table.Cell>{this.props.stuff.name}</Table.Cell>
-          <Table.Cell>{this.props.stuff.quantity}</Table.Cell>
+          <Table.Cell>{document.lastModified}</Table.Cell>
           <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
+            <Link to={`/NotFound`}><Icon name='chart bar'/></Link>
+          </Table.Cell>
+          <Table.Cell>
+            <Link to={`/edit/${this.props.stuff._id}`}><Icon name='edit'/></Link>
           </Table.Cell>
           <Table.Cell>
             <Button icon onClick={() => this.removeItem(this.props.stuff._id)}>
