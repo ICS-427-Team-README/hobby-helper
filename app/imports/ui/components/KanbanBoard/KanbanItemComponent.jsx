@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Button, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
@@ -9,6 +9,14 @@ class KanbanItemComponent extends React.Component {
         <Card style={{ width: '100%' }}>
           <Card.Content header={this.props.hobbyItem.name} />
           <Card.Content description={this.props.hobbyItem.description} />
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
+            <Button basic icon style={{ margin: 5 }}>
+              <Icon name='edit' />
+            </Button>
+            <Button basic icon style={{ margin: 5 }}>
+              <Icon name='trash alternate'/>
+            </Button>
+          </div>
         </Card>
     );
   }
