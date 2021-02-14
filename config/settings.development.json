@@ -17,6 +17,8 @@
     { "owner": "john@foo.com", "hobby": "TV Show", "name": "Falcon and The Winter Soldier", "status": 2, "description": "Buddy Cop" },
     { "owner": "john@foo.com", "hobby": "TV Show", "name": "Loki", "status": 1, "description": "Crime Thriller" },
     { "owner": "john@foo.com", "hobby": "TV Show", "name": "What If", "status": 1, "description": "Animation" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Bridgerton", "status": 3, "description": "British" }
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Bridgerton", "status": 3, "description": "British" },
+    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Gossip Girl", "status": 3, "description": "Drama" },
+    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Princess Diaries", "status": 1, "description": "Royalty" }
   ]
 }
