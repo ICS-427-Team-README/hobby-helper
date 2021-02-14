@@ -13,6 +13,7 @@ class StuffItem extends React.Component {
         <Table.Row>
           <Table.Cell>{this.props.stuff.name}</Table.Cell>
           <Table.Cell>{document.lastModified}</Table.Cell>
+          <Table.Cell>{this.props.stuff.status}</Table.Cell>
           <Table.Cell>
             <Link to={`/NotFound`}><Icon name='chart bar'/></Link>
           </Table.Cell>
