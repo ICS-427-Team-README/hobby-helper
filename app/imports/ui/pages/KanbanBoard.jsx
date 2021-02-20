@@ -10,7 +10,6 @@ import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
 class KanbanBoard extends React.Component {
   render() {
     const hobbyItems = this.props.hobbyItems.filter(item => item);
-    console.log(hobbyItems);
     return (
         <Container id='kanban-page' style={{ display: 'flex', flexDirection: 'column', height: 800 }}>
           <Container textAlign='left' style={{ padding: 10, alignItems: 'flex-start' }}>
