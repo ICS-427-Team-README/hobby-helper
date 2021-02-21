@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { NavLink, withRouter } from 'react-router-dom';
-import { Container, Button } from 'semantic-ui-react';
+import { Container, Button, Menu } from 'semantic-ui-react';
 import KanbanBoardComponent from '../components/KanbanBoard/KanbanBoardComponent';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
 
@@ -18,7 +18,8 @@ class KanbanBoard extends React.Component {
           <Container textAlign='left' style={{ padding: 10, alignItems: 'flex-start' }}>
             <Container style={{ display: 'flex' }}>
               <p style={{ fontSize: 35, margin: 5 }}>TV Shows</p>
-              <Button basic labelPosition='left' icon='left chevron' content='Back' color='blue' style={{ height: '50%', alignSelf: 'center', marginLeft: 25 }}/>
+              <Button basic labelPosition='left' icon='left chevron' content='Back' color='blue' style={{ height: '50%', alignSelf: 'center', marginLeft: 25 }}
+                      as={NavLink} activeClassName="active" exact to="/list" key='list'/>
             </Container>
             <Container style={{ display: 'flex', justifyContent: 'space-between', padding: 10 }}>
               <p style={{ fontSize: 18, margin: 5, marginLeft: 10 }}>View Statistics</p>
