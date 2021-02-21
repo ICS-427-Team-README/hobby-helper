@@ -18,6 +18,7 @@ import Signout from '../pages/Signout';
 import KanbanBoard from '../pages/KanbanBoard';
 import KanbanItemAdd from '../components/KanbanBoard/KanbanItemAdd';
 import KanbanItemEdit from '../components/KanbanBoard/KanbanItemEdit';
+import Profile from '../pages/Profile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -31,6 +32,7 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/signout" component={Signout}/>
+              <Route path="/profile" component={Profile}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
