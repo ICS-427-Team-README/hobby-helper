@@ -1,12 +1,17 @@
-![ci-badge](https://github.com/ics-software-engineering/meteor-application-template-react/workflows/ci-meteor-application-template-react/badge.svg)
+#Hobby Helper
+By Team README
 
-For details, please see http://ics-software-engineering.github.io/meteor-application-template-react/
+---
 
+## Completed Issues
+See completed issues in [Milestone 1](https://github.com/ics-427-team-readme/hobby-helper/projects/1).
 
+## Pending Issues
+See pending issues in the *To do* and *In Progress* sections in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3)
 
-## What is complete so far
-
-## What is pending
-
-## List of team members specifying under each team member's name: what they worked on in the project so far, and what they will be handling next.
-
+| Member | Worked On So Far| Working on Next |
+| --- | --- | --- |
+| Angeli Amascual | kanban page; kanban board improvements | Linking Hobby list and Kanban Board; Kanban drag and drop|
+| Matthew Kirts | Landing page; sign up/in page | Navbar; Landing page CSS and images |
+| Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function|
+| Jessica Tang | List hobbies page; | Social: Visit other users' trackers | 
