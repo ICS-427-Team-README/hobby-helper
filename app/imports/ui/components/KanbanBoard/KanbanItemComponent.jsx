@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert';
+import { Link, withRouter } from 'react-router-dom';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class KanbanItemComponent extends React.Component {
@@ -30,9 +31,11 @@ class KanbanItemComponent extends React.Component {
           <Card.Content header={this.props.hobbyItem.name} />
           <Card.Content description={this.props.hobbyItem.description} />
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
-            <Button basic icon style={{ margin: 5 }}>
-              <Icon name='edit' />
-            </Button>
+            <Link to={`/kanbanEdit/${this.props.hobbyItem._id}`}>
+              <Button basic icon style={{ margin: 5 }}>
+                <Icon name='edit' />
+              </Button>
+            </Link>
             <Button basic icon style={{ margin: 5 }} onClick={() => this.removeItem(this.props.hobbyItem._id)}>
               <Icon name='trash alternate'/>
             </Button>
@@ -46,4 +49,4 @@ KanbanItemComponent.propTypes = {
   HobbyItems: PropTypes.object.isRequired,
 };
 
-export default KanbanItemComponent;
+export default withRouter(KanbanItemComponent);

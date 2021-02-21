@@ -12,13 +12,13 @@
   ],
 
   "defaultHobby": [
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "WandaVision", "status": 1, "description": "Marvel TV Show" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Game of Thrones", "status": 2, "description": "Dramatic" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Falcon and The Winter Soldier", "status": 2, "description": "Buddy Cop" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Loki", "status": 1, "description": "Crime Thriller" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "What If", "status": 1, "description": "Animation" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Bridgerton", "status": 3, "description": "British" },
-    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Gossip Girl", "status": 3, "description": "Drama" },
-    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Princess Diaries", "status": 1, "description": "Royalty" }
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "WandaVision", "status": "Backlog", "description": "Marvel TV Show" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Game of Thrones", "status": "Current", "description": "Dramatic" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Falcon and The Winter Soldier", "status": "Current", "description": "Buddy Cop" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Loki", "status": "Backlog", "description": "Crime Thriller" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "What If", "status": "Backlog", "description": "Animation" },
+    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Bridgerton", "status": "Completed", "description": "British" },
+    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Gossip Girl", "status": "Completed", "description": "Drama" },
+    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Princess Diaries", "status": "Backlog", "description": "Royalty" }
   ]
 }

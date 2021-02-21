@@ -6,20 +6,7 @@ import { HobbyItems } from '../../../api/HobbyItems/HobbyItems';
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class KanbanBoardComponent extends React.Component {
   render() {
-    let status = 0;
-    switch (this.props.boardTitle) {
-      case 'Backlog':
-        status = 1;
-        break;
-      case 'Current':
-        status = 2;
-        break;
-      case 'Completed':
-        status = 3;
-        break;
-      default:
-        break;
-    }
+    const status = this.props.boardTitle;
     const filteredHobbyItems = this.props.hobbyItemArray.filter(item => item.status === status);
     return (
         <div style={{ display: 'flex', flexDirection: 'column', padding: 10, height: '100%', width: '100%' }}>

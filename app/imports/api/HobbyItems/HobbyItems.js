@@ -14,7 +14,11 @@ class HobbyItemsCollection {
       owner: String,
       hobby: String,
       name: String,
-      status: Number,
+      status: {
+        type: String,
+        allowedValues: ['Backlog', 'Current', 'Completed'],
+        defaultValue: 'Current',
+      },
       description: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

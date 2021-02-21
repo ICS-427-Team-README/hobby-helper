@@ -27,22 +27,8 @@ class KanbanItemAdd extends React.Component {
   /** On submit, insert the data. */
   submit(data, formRef) {
     const { hobby, name, status, description } = data;
-    let statusNumber = 0;
-    switch (status) {
-      case 'Backlog':
-        statusNumber = 1;
-        break;
-      case 'Current':
-        statusNumber = 2;
-        break;
-      case 'Completed':
-        statusNumber = 3;
-        break;
-      default:
-        break;
-    }
     const owner = Meteor.user().username;
-    HobbyItems.collection.insert({ owner, hobby, name, status: statusNumber, description },
+    HobbyItems.collection.insert({ owner, hobby, name, status, description },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');

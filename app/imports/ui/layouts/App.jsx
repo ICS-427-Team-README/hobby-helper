@@ -17,6 +17,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import KanbanBoard from '../pages/KanbanBoard';
 import KanbanItemAdd from '../components/KanbanBoard/KanbanItemAdd';
+import KanbanItemEdit from '../components/KanbanBoard/KanbanItemEdit';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <ProtectedRoute path="/kanban" component={KanbanBoard}/>
               <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
+              <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <Route component={NotFound}/>
             </Switch>
