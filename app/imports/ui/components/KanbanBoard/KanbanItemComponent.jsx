@@ -23,6 +23,7 @@ class KanbanItemComponent extends React.Component {
           }
         });
   }
+
   render() {
     return (
         <Card style={{ width: '100%' }}>
