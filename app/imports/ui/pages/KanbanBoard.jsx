@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { NavLink, withRouter } from 'react-router-dom';
-import { Container, Button, Menu } from 'semantic-ui-react';
+import { Container, Button } from 'semantic-ui-react';
 import KanbanBoardComponent from '../components/KanbanBoard/KanbanBoardComponent';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
 
@@ -17,7 +17,7 @@ class KanbanBoard extends React.Component {
         <Container id='kanban-page' style={{ display: 'flex', flexDirection: 'column', height: 800 }}>
           <Container textAlign='left' style={{ padding: 10, alignItems: 'flex-start' }}>
             <Container style={{ display: 'flex' }}>
-              <p style={{ fontSize: 35, margin: 5 }}>TV Shows</p>
+              <p style={{ fontSize: 35, margin: 5 }}>{this.props.hobby}</p>
               <Button basic labelPosition='left' icon='left chevron' content='Back' color='blue' style={{ height: '50%', alignSelf: 'center', marginLeft: 25 }}
                       as={NavLink} activeClassName="active" exact to="/list" key='list'/>
             </Container>
@@ -46,15 +46,18 @@ class KanbanBoard extends React.Component {
 }
 
 KanbanBoard.propTypes = {
+  hobby: PropTypes.string.isRequired,
   hobbyItems: PropTypes.array.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-const KanbanBoardContainer = withTracker(() => {
+const KanbanBoardContainer = withTracker(({ match }) => {
   // Get access to HobbyItem documents.
+  const hobbyName = match.params.hobbyName;
   const subscription = Meteor.subscribe(HobbyItems.userPublicationName);
   return {
-    hobbyItems: HobbyItems.collection.find({}).fetch(),
+    hobby: hobbyName,
+    hobbyItems: HobbyItems.collection.find({ hobby: hobbyName }).fetch(),
     ready: subscription.ready(),
   };
 })(KanbanBoard);

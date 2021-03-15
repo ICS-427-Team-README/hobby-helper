@@ -12,13 +12,27 @@
   ],
 
   "defaultHobby": [
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "WandaVision", "status": "Backlog", "description": "Marvel TV Show" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Game of Thrones", "status": "Current", "description": "Dramatic" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Falcon and The Winter Soldier", "status": "Current", "description": "Buddy Cop" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Loki", "status": "Backlog", "description": "Crime Thriller" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "What If", "status": "Backlog", "description": "Animation" },
-    { "owner": "john@foo.com", "hobby": "TV Show", "name": "Bridgerton", "status": "Completed", "description": "British" },
-    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Gossip Girl", "status": "Completed", "description": "Drama" },
-    { "owner": "admin@foo.com", "hobby": "TV Show", "name": "Princess Diaries", "status": "Backlog", "description": "Royalty" }
+    { "username": "john@foo.com", "hobbyName": "TV Shows", "lastUpdated": "9-12-2020" },
+    { "username": "john@foo.com", "hobbyName": "Movies", "lastUpdated": "9-12-2020" }
+  ],
+
+  "defaultHobbyItems": [
+    { "owner": "john@foo.com", "hobby": "TV Shows", "name": "WandaVision", "status": "Backlog", "description": "Marvel TV Show" },
+    { "owner": "john@foo.com", "hobby": "TV Shows", "name": "Game of Thrones", "status": "Current", "description": "Dramatic" },
+    { "owner": "john@foo.com", "hobby": "TV Shows", "name": "Falcon and The Winter Soldier", "status": "Current", "description": "Buddy Cop" },
+    { "owner": "john@foo.com", "hobby": "TV Shows", "name": "Loki", "status": "Backlog", "description": "Crime Thriller" },
+    { "owner": "john@foo.com", "hobby": "TV Shows", "name": "What If", "status": "Backlog", "description": "Animation" },
+    { "owner": "john@foo.com", "hobby": "TV Shows", "name": "Bridgerton", "status": "Completed", "description": "British" },
+    { "owner": "john@foo.com", "hobby": "Movies", "name": "Avengers Endgame", "status": "Completed", "description": "British" },
+    { "owner": "john@foo.com", "hobby": "Movies", "name": "Frozen 2", "status": "Current", "description": "British" },
+    { "owner": "john@foo.com", "hobby": "Movies", "name": "Iron Man", "status": "Completed", "description": "British" },
+    { "owner": "john@foo.com", "hobby": "Movies", "name": "Your Name", "status": "Backlog", "description": "British" },
+    { "owner": "admin@foo.com", "hobby": "TV Shows", "name": "Gossip Girl", "status": "Completed", "description": "Drama" },
+    { "owner": "admin@foo.com", "hobby": "TV Shows", "name": "Princess Diaries", "status": "Backlog", "description": "Royalty" }
+  ],
+
+  "defaultUser": [
+    { "username": "john@foo.com", "firstName": "John", "lastName": "Foo", "description": "John Foo's profile", "privacy": true
+    }
   ]
 }

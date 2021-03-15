@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
+import { UserHobbies } from '../../api/user/UserHobbies';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems.js';
+import { User } from '../../api/user/UserCollection';
 
 /* eslint-disable no-console */
 
@@ -12,8 +14,20 @@ function addData(data) {
 
 /** Initialize the database with a default data document. */
 function addHobby(data) {
+  console.log(`  Adding: ${data.hobbyName} (${data.username})`);
+  UserHobbies.collection.insert(data);
+}
+
+/** Initialize the database with a default data document. */
+function addHobbyItems(data) {
   console.log(`  Adding: ${data.name} (${data.owner})`);
   HobbyItems.collection.insert(data);
+}
+
+/** Initialize the database with a default data document. */
+function addUser(data) {
+  console.log(`  Adding: ${data.firstName} (${data.username})`);
+  User.collection.insert(data);
 }
 
 /** Initialize the collection if empty. */
@@ -25,9 +39,25 @@ if (Stuffs.collection.find().count() === 0) {
 }
 
 /** Initialize the collection if empty. */
-if (HobbyItems.collection.find().count() === 0) {
+if (UserHobbies.collection.find().count() === 0) {
   if (Meteor.settings.defaultHobby) {
     console.log('Creating default data.');
     Meteor.settings.defaultHobby.map(data => addHobby(data));
+  }
+}
+
+/** Initialize the collection if empty. */
+if (HobbyItems.collection.find().count() === 0) {
+  if (Meteor.settings.defaultHobbyItems) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultHobbyItems.map(data => addHobbyItems(data));
+  }
+}
+
+/** Initialize the collection if empty. */
+if (User.collection.find().count() === 0) {
+  if (Meteor.settings.defaultUser) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultUser.map(data => addUser(data));
   }
 }

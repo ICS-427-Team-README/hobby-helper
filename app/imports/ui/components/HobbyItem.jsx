@@ -4,24 +4,25 @@ import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class StuffItem extends React.Component {
+class HobbyItem extends React.Component {
   removeItem(docID) {
-    this.props.Stuffs.collection.remove(docID);
+    this.props.HobbyItems.collection.remove(docID);
   }
-  render () {
+
+  render() {
     return (
         <Table.Row>
-          <Table.Cell>{this.props.stuff.name}</Table.Cell>
+          <Table.Cell>
+            <Link to={`/kanban/${this.props.hobbyItem.hobbyName}`}>{this.props.hobbyItem.hobbyName}</Link></Table.Cell>
           <Table.Cell>{document.lastModified}</Table.Cell>
-          <Table.Cell>{this.props.stuff.status}</Table.Cell>
           <Table.Cell>
             <Link to={'/NotFound'}><Icon name='chart bar'/></Link>
           </Table.Cell>
           <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}><Icon name='edit'/></Link>
+            <Link to={`/edit/${this.props.hobbyItem._id}`}><Icon name='edit'/></Link>
           </Table.Cell>
           <Table.Cell>
-            <Button icon onClick={() => this.removeItem(this.props.stuff._id)}>
+            <Button icon onClick={() => this.removeItem(this.props.hobbyItem._id)}>
               <Icon name='remove'/>
             </Button>
           </Table.Cell>
@@ -31,10 +32,10 @@ class StuffItem extends React.Component {
 }
 
 /** Require a document to be passed to this component. */
-StuffItem.propTypes = {
-  stuff: PropTypes.object.isRequired,
-  Stuffs: PropTypes.object.isRequired,
+HobbyItem.propTypes = {
+  hobbyItem: PropTypes.object.isRequired,
+  HobbyItems: PropTypes.object.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */
-export default withRouter(StuffItem);
+export default withRouter(HobbyItem);
