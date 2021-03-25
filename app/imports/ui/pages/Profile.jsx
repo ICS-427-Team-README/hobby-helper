@@ -1,6 +1,5 @@
 import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import {Image, Header, Grid, Segment, Divider, List, Button} from 'semantic-ui-react';
+import { Image, Header, Grid, List, Button } from 'semantic-ui-react';
 
 /** After the user clicks the "Signout" link in the NavBar, log them out and display this page. */
 export default class Profile extends React.Component {
