@@ -14,7 +14,7 @@ class KanbanBoard extends React.Component {
     const hobbyItems = this.props.hobbyItems.filter(item => item);
 
     return (
-        <Container id='kanban-page' style={{ display: 'flex', flexDirection: 'column', height: 800 }}>
+        <Container id='kanban-page' style={{ display: 'flex', flexDirection: 'column' }}>
           <Container textAlign='left' style={{ padding: 10, alignItems: 'flex-start' }}>
             <Container style={{ display: 'flex' }}>
               <p style={{ fontSize: 35, margin: 5 }}>{this.props.hobby}</p>
@@ -28,7 +28,7 @@ class KanbanBoard extends React.Component {
                       as={NavLink} activeClassName="active" exact to="/kanbanAdd" key='kanbanAdd' />
             </Container>
           </Container>
-          <Container style={{ display: 'flex', flexDirection: 'row', padding: 10, height: '100%' }}>
+          <Container style={{ display: 'flex', flexDirection: 'row', padding: 10 }}>
             <div style={{ display: 'flex', flexDirection: 'column', flex: 3, padding: 10, height: '100%' }}>
               <KanbanBoardComponent boardTitle={'Backlog'} hobbyItemArray={hobbyItems}/>
             </div>
