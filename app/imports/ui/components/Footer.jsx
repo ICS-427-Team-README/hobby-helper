@@ -21,7 +21,7 @@ class Footer extends React.Component {
                 <p>Create a list of different hobbies such as TV shows, books, movies, and more. Each hobby has their own boards you can easily switch to and from.</p>
               </Grid.Column>
               <Grid.Column>
-                <h2>View Statistics of Hobbies</h2>
+                <h2>View Statistics of Hobbies from You and Others</h2>
                 < hr/>
                 <p>See data regarding hobbies such as level of activity for each hobby and time spent in each column for individual items.</p>
               </Grid.Column>
