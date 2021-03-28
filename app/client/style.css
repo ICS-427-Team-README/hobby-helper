@@ -1,5 +1,5 @@
 .hobby-landing {
-  background: url('images/anime-games.jpg') no-repeat center;
+  background: url('/app/public/images/anime-games.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
 }

@@ -6,10 +6,9 @@ class Landing extends React.Component {
   render() {
     const footerStyle = { background: '#6FD68B' };
     return (
-        <div>
+        <div className = 'hobby-landing'>
         <Grid id='landing-page' textAlign='left' container>
-
-          <Grid.Column textAlign='left' width={8} className = 'hobby-landing'>
+          <Grid.Column textAlign='left' width={8}>
             <h1>Track Hobbies in One Place</h1>
             <h3>Welcome to the Hobby Helper!</h3>
             <h3>Here, you can add add and keep track of current hobbies and interests.</h3>
