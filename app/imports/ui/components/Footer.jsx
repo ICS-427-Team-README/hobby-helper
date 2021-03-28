@@ -3,8 +3,10 @@ import React from 'react';
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
+    const color = { background: '#6FD68B'};
     const divStyle = { paddingTop: '15px', background: '#6FD68B' };
     return (
+        <div style={color}>
         <footer>
           <div style={divStyle} className="ui center aligned container">
             <hr />
@@ -14,6 +16,7 @@ class Footer extends React.Component {
             <a href="http://ics-software-engineering.github.io/meteor-application-template-react">Template Home Page</a>
           </div>
         </footer>
+        </div>
     );
   }
 }

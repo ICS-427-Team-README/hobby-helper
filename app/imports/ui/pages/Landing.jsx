@@ -6,18 +6,20 @@ class Landing extends React.Component {
   render() {
     const footerStyle = { background: '#6FD68B' };
     return (
-        <div className = 'hobby-landing'>
+        <div>
         <Grid id='landing-page' textAlign='left' container>
 
-          <Grid.Column textAlign='left' width={8}>
+          <Grid.Column textAlign='left' width={8} className = 'hobby-landing'>
             <h1>Track Hobbies in One Place</h1>
-            {/* eslint-disable-next-line max-len */}
-            <h3>Welcome to the Hobby Helper! Here, you can add add and keep track of current hobbies and interests. The Hobby Helper will also recommend shows, movies, items, etc. based on your current interests!</h3>
+            <h3>Welcome to the Hobby Helper!</h3>
+            <h3>Here, you can add add and keep track of current hobbies and interests.</h3>
+            <h3>The Hobby Helper will also recommend shows, movies, items, etc. based on your current interests!</h3>
             <h1> </h1>
             <h1> </h1>
           </Grid.Column>
-          <footer style={footerStyle}>
-            <Grid divided='vertically' container>
+          <div style={footerStyle}>
+          <footer>
+            <Grid divided='vertically'>
               <Grid.Row columns={3}>
                 <Grid.Column>
                   <h2>Simple And Easy Kanban Board UI</h2>
@@ -37,6 +39,7 @@ class Landing extends React.Component {
               </Grid.Row>
             </Grid>
           </footer>
+          </div>
         </Grid>
         </div>
   );
