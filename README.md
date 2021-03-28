@@ -14,10 +14,10 @@ See pending issues in the *To Do* and *In Progress* sections in [Milestone 3](ht
 
 | Member | Worked On So Far| Working on Next |
 | --- | --- | --- |
-| Angeli Amascual | kanban page; kanban board improvements | Linking Hobby list and Kanban Board; Kanban drag and drop|
-| Matthew Kirts | Landing page; sign up/in page | Navbar; Landing page CSS and images |
-| Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function|
-| Jessica Tang | List hobbies page; | Social: Visit other users' trackers | 
+| Angeli Amascual | kanban page; kanban board improvements Linking Hobby list and Kanban Board; Kanban drag and drop| |
+| Matthew Kirts | Landing page; sign up/in page Navbar; Landing page CSS and images| Navbar; Landing page CSS and images| Social: Privacy Settings |
+| Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function |
+| Jessica Tang | List hobbies page; | Social: Visit other users' trackers |
 
 (February 21, 2021 ~ March 28, 2021)
 
@@ -28,7 +28,7 @@ NEW COMPLETIONS:
 
 | Member | Worked On So Far| Working on Next |
 | --- | --- | --- |
-| Angeli Amascual | kanban page; kanban board improvements Linking Hobby list and Kanban Board; Kanban drag and drop| |
-| Matthew Kirts | Landing page; sign up/in page Navbar; Landing page CSS and images| Navbar; Landing page CSS and images| Social: Privacy Settings |
-| Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function |
+| Angeli Amascual | kanban page; kanban board improvements | Linking Hobby list and Kanban Board; Kanban drag and drop|
+| Matthew Kirts | Landing page; sign up/in page | Navbar; Landing page CSS and images |
+| Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function|
 | Jessica Tang | List hobbies page; | Social: Visit other users' trackers | 
