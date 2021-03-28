@@ -10,6 +10,7 @@ class StatsItem extends React.Component {
     return (
         <Table.Row>
           <Table.Cell>{this.props.stat.name}</Table.Cell>
+          <Table.Cell>{this.props.stat.hobby}</Table.Cell>
         </Table.Row>
     );
   }
