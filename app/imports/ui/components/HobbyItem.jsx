@@ -16,7 +16,7 @@ class HobbyItem extends React.Component {
             <Link to={`/kanban/${this.props.hobbyItem.hobbyName}`}>{this.props.hobbyItem.hobbyName}</Link></Table.Cell>
           <Table.Cell>{document.lastModified}</Table.Cell>
           <Table.Cell>
-            <Link to={'/NotFound'}><Icon name='chart bar'/></Link>
+            <Link to={`/stats/${this.props.hobbyItem.hobbyName}`}><Icon name='chart bar'/></Link>
           </Table.Cell>
           <Table.Cell>
             <Link to={`/edit/${this.props.hobbyItem._id}`}><Icon name='edit'/></Link>
