@@ -4,12 +4,12 @@ By Team README
 ---
 
 ## Completed Issues
-See completed issues in [Milestone 1](https://github.com/ics-427-team-readme/hobby-helper/projects/1).
-See completed issues in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3).
+- See completed issues in [Milestone 1](https://github.com/ics-427-team-readme/hobby-helper/projects/1).
+- See completed issues in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3).
 
 ## Pending Issues
-See pending issues in the *To do* and *In Progress* sections in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3)
-See pending issues in the *To Do* and *In Progress* sections in [Milestone 3](https://github.com/ics-427-team-readme/hobby-helper/projects/5)
+- See pending issues in the *To do* and *In Progress* sections in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3)
+- See pending issues in the *To Do* and *In Progress* sections in [Milestone 3](https://github.com/ics-427-team-readme/hobby-helper/projects/5)
 
 | Member | Worked On So Far| Working on Next |
 | --- | --- | --- |
