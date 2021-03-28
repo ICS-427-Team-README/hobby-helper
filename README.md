@@ -28,7 +28,7 @@ NEW COMPLETIONS:
 - Working on changes to the Kanban to sort hobbies
 
 | Member | Worked On So Far| Working on Next | New Completions |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Angeli Amascual | kanban page; kanban board improvements Linking Hobby list and Kanban Board; Movable Kanban| | Movable Kanban |
 | Matthew Kirts | Landing page; sign up/in page Navbar; Landing page CSS and images| Navbar; Landing page CSS and images | Navbar, Landing Page CSS; privacy settings in progress |
 | Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function | Currently working on getting the sort function to work properly |
