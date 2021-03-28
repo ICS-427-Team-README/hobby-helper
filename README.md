@@ -24,6 +24,8 @@ NEW COMPLETIONS:
 - Changes to the Kanban
 - Working movable Kanban (no drag and drop)
 - CSS Changes, though there will be more updates on this
+- Currently fixing social settings regarding privacy and visiting other users' trackers
+- Working on changes to the Kanban to sort hobbies
 
 | Member | Worked On So Far| Working on Next |
 | --- | --- | --- |
