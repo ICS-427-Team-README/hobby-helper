@@ -6,6 +6,7 @@ class Landing extends React.Component {
   render() {
     const footerStyle = { background: '#6FD68B' };
     return (
+        <div className = 'hobby-landing'>
         <Grid id='landing-page' textAlign='left' container>
 
           <Grid.Column textAlign='left' width={8}>
@@ -37,6 +38,7 @@ class Landing extends React.Component {
             </Grid>
           </footer>
         </Grid>
+        </div>
   );
   }
 }
