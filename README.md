@@ -27,9 +27,9 @@ NEW COMPLETIONS:
 - Currently fixing social settings regarding privacy and visiting other users' trackers
 - Working on changes to the Kanban to sort hobbies
 
-| Member | Worked On So Far| Working on Next | New Completions |
+| Member | New completions | Current | Next |
 | --- | --- | --- | --- |
-| Angeli Amascual | kanban page; kanban board improvements Linking Hobby list and Kanban Board; Movable Kanban| | Movable Kanban |
-| Matthew Kirts | Landing page; sign up/in page Navbar; Landing page CSS and images| Navbar touchups; CSS touchups and images | Navbar, Landing Page CSS; privacy settings in progress |
-| Eric Rivera | Profile page | Hobby List: Sorting Hobbies Function | Currently working on getting the sort function to work properly |
-| Jessica Tang | List hobbies page; | Social: Visit other users' trackers | Linking for visiting other users' trackers in progress |
+| Angeli Amascual | Linking Hobby list and Kanban Board; Filtering Kanban items by Kanban board; Movable items on Kanban boards; | Kanban: Drag and Drop| |
+| Matthew Kirts | Navbar; Styling and CSS | Touch ups and improvements; Privacy settings | |
+| Eric Rivera |  | Sorting Hobby List |  |
+| Jessica Tang | Basic statistics page to display sub-hobbies and who has them saved on their hobby list | Social: Visiting functionality |  |
