@@ -17,7 +17,8 @@ By Team README
 | Jessica Tang | List hobbies page; | Social: Visit other users' trackers | 
 
 (February 21, 2021 ~ March 28, 2021)
-## GitHub Repository: [Link](https://github.com/ics-427-team-readme/hobby-helper)
+## GitHub Repository: 
+- View [here](https://github.com/ics-427-team-readme/hobby-helper)
 
 ## Completed Issues
 - See completed issues in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3).
