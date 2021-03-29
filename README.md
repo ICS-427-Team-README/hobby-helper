@@ -5,11 +5,9 @@ By Team README
 
 ## Completed Issues
 - See completed issues in [Milestone 1](https://github.com/ics-427-team-readme/hobby-helper/projects/1).
-- See completed issues in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3).
 
 ## Pending Issues
 - See pending issues in the *To do* and *In Progress* sections in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3)
-- See pending issues in the *To Do* and *In Progress* sections in [Milestone 3](https://github.com/ics-427-team-readme/hobby-helper/projects/5)
 
 | Member | Worked On So Far| Working on Next |
 | --- | --- | --- |
@@ -19,17 +17,23 @@ By Team README
 | Jessica Tang | List hobbies page; | Social: Visit other users' trackers | 
 
 (February 21, 2021 ~ March 28, 2021)
+## GitHub Repository: [Link](https://github.com/ics-427-team-readme/hobby-helper)
 
-NEW COMPLETIONS:
-- Changes to the Kanban
-- Working movable Kanban (no drag and drop)
-- CSS Changes, though there will be more updates on this
-- Currently fixing social settings regarding privacy and visiting other users' trackers
-- Working on changes to the Kanban to sort hobbies
+## Completed Issues
+- See completed issues in [Milestone 2](https://github.com/ics-427-team-readme/hobby-helper/projects/3).
+
+## Pending Issues
+- See pending issues in the *To Do* and *In Progress* sections in [Milestone 3](https://github.com/ics-427-team-readme/hobby-helper/projects/5)
+
+Progress:
+- Kanban page improvements
+- Navbar improvements
+- Styling CSS Changes
+- Statistics page
 
 | Member | New completions | Current | Next |
 | --- | --- | --- | --- |
-| Angeli Amascual | Linking Hobby list and Kanban Board; Filtering Kanban items by Kanban board; Movable items on Kanban boards; | Kanban: Drag and Drop| |
+| Angeli Amascual | Linking Hobby list and Kanban Board; Filtering Kanban items by Kanban board; Movable items on Kanban boards; | Kanban: Drag and Drop | |
 | Matthew Kirts | Navbar; Styling and CSS | Touch ups and improvements; Privacy settings | |
 | Eric Rivera |  | Sorting Hobby List |  |
 | Jessica Tang | Basic statistics page to display sub-hobbies and who has them saved on their hobby list | Social: Visiting functionality |  |
