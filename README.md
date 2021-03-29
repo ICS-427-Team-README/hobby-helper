@@ -34,7 +34,7 @@ Progress:
 
 | Member | New completions | Current | Next |
 | --- | --- | --- | --- |
-| Angeli Amascual | Linking Hobby list and Kanban Board; Filtering Kanban items by Kanban board; Movable items on Kanban boards; | Kanban: Drag and Drop | |
+| Angeli Amascual | Linking Hobby list and Kanban Board; Filtering Kanban items by Kanban board; Movable items on Kanban boards; | Improving Kanban look/functionality | Kanban: Drag and Drop |
 | Matthew Kirts | Navbar; Styling and CSS | Touch ups and improvements; Privacy settings | |
 | Eric Rivera |  | Sorting Hobby List |  |
 | Jessica Tang | Basic statistics page to display sub-hobbies and who has them saved on their hobby list | Social: Visiting functionality |  |
