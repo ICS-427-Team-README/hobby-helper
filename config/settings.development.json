@@ -17,6 +17,11 @@
   ],
 
   "defaultHobbyItems": [
+    { "owner": "john@foo.com", "hobby": "Video Games", "name": "Halo 4", "status": "Completed", "description": "Xbox Video Game" },
+    { "owner": "john@foo.com", "hobby": "Video Games", "name": "Call of Duty: Modern Warfare", "status": "Completed", "description": "FPS" },
+    { "owner": "john@foo.com", "hobby": "Video Games", "name": "Forza Horizon 4", "status": "Current", "description": "Xbox Video Game" },
+    { "owner": "john@foo.com", "hobby": "Video Games", "name": "Halo MCC", "status": "Current", "description": "Xbox Video Game" },
+    { "owner": "john@foo.com", "hobby": "Video Games", "name": "Halo 5", "status": "Completed", "description": "Xbox Video Game" },
     { "owner": "john@foo.com", "hobby": "TV Shows", "name": "WandaVision", "status": "Backlog", "description": "Marvel TV Show" },
     { "owner": "john@foo.com", "hobby": "TV Shows", "name": "Game of Thrones", "status": "Current", "description": "Dramatic" },
     { "owner": "john@foo.com", "hobby": "TV Shows", "name": "Falcon and The Winter Soldier", "status": "Current", "description": "Buddy Cop" },
