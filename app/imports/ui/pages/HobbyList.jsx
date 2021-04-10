@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Container, Table, Header, Loader, Button } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { UserHobbies } from '../../api/user/UserHobbies';
@@ -9,16 +9,36 @@ import HobbyItem from '../components/HobbyItem';
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class HobbyList extends React.Component {
 
-  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
-  render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+  constructor(props) {
+    super(props);
+    this.state = {
+      sort: this.props.hobbyItems,
+    };
   }
 
   /** Render the page once subscriptions have been received. */
-  renderPage() {
+  render() {
     return (
         <Container>
           <Header as="h2" textAlign="center">List Hobbies</Header>
+          <Container style={{ display: 'flex', flexDirection: 'column' }}>
+            <p style={{ fontSize: 18, alignSelf: 'flex-start' }}>Sort Hobbies: </p>
+            <Container>
+              <Button basic style={{ margin: 5 }} onClick={() => this.setState({ sort: this.props.hobbyItems.sort((a, b) => {
+                  const upperA = a.hobbyName.toUpperCase();
+                  const upperB = b.hobbyName.toUpperCase();
+                  if (upperA < upperB) {
+                    return -1;
+                  }
+                  return 1;
+                }) })}>Name</Button>
+              <Button basic style={{ margin: 5 }} onClick={() => this.setState({ sort: this.props.hobbyItems.sort((a, b) => {
+                  const dateA = new Date(a.lastUpdated);
+                  const dateB = new Date(b.lastUpdated);
+                  return dateA - dateB;
+                }) })}>Last Modified</Button>
+            </Container>
+          </Container>
           <Table>
             <Table.Header>
               <Table.Row>
@@ -30,7 +50,7 @@ class HobbyList extends React.Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.hobbyItems.map((hobbyItem) => <HobbyItem key={hobbyItem._id} hobbyItem={hobbyItem} HobbyItems={UserHobbies}/>)}
+              {this.state.sort.map((hobbyItem) => <HobbyItem key={hobbyItem._id} hobbyItem={hobbyItem} HobbyItems={UserHobbies}/>)}
             </Table.Body>
           </Table>
         </Container>
