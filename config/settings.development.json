@@ -13,7 +13,7 @@
 
   "defaultHobby": [
     { "username": "john@foo.com", "hobbyName": "TV Shows", "lastUpdated": "9-12-2020" },
-    { "username": "john@foo.com", "hobbyName": "Movies", "lastUpdated": "9-12-2020" }
+    { "username": "john@foo.com", "hobbyName": "Movies", "lastUpdated": "9-13-2020" }
   ],
 
   "defaultHobbyItems": [
