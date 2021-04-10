@@ -19,6 +19,7 @@ import KanbanBoard from '../pages/KanbanBoard';
 import KanbanItemAdd from '../components/KanbanBoard/KanbanItemAdd';
 import KanbanItemEdit from '../components/KanbanBoard/KanbanItemEdit';
 import Profile from '../pages/Profile';
+import Statistics from '../pages/Statistics';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
               <ProtectedRoute path="/kanban/:hobbyName" component={KanbanBoard}/>
               <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
               <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>
+              <ProtectedRoute path="/stats/" component={Statistics}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <Route component={NotFound}/>
             </Switch>
