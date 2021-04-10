@@ -28,6 +28,12 @@ class Profile extends React.Component {
                         <Icon name='left chevron'/>Edit Profile
                       </Button>
                   )}
+                  <Item.Header as='a'>{this.props.userInfo.firstName} {this.props.userInfo.lastName}</Item.Header>
+                  <Item.Meta>{this.props.userInfo.username}</Item.Meta>
+                  <Item.Meta>{this.props.userInfo.number}</Item.Meta>
+                  <Item.Description>
+                  <Item.Meta>{this.props.userInfo.description}</Item.Meta>
+                  </Item.Description>
                 </Item.Content>
                 </Item>
               </Item.Group>
@@ -46,10 +52,10 @@ Profile.propTypes = {
 
 export default withTracker(({ match }) => {
   const userAccount = Meteor.users.findOne(match.params._id);
-  const userName = userAccount ? userAccount.username : '';
+  const username = userAccount ? userAccount.username : '';
   const subscription = Meteor.subscribe('User');
   return {
-    userInfo: User.findOne({ user: userName }) ? User.findOne({ user: userName }) : {},
+    userInfo: User.find({ user: username }) ? User.find({ user: username }) : {},
     ready: subscription.ready(),
     currentUser: Meteor.user() ? Meteor.user().username : '',
     currentId: match.params._id,

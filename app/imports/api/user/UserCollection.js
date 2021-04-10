@@ -15,6 +15,7 @@ class UserCollection {
       firstName: String,
       lastName: String,
       description: String,
+      email: String,
       image: String,
       privacy: Boolean,
     }, { tracker: Tracker });
