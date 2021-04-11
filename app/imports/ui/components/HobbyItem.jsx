@@ -1,12 +1,29 @@
 import React from 'react';
 import { Table, Button, Icon } from 'semantic-ui-react';
+import swal from 'sweetalert';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class HobbyItem extends React.Component {
   removeItem(docID) {
-    this.props.HobbyItems.collection.remove(docID);
+    swal({
+      title: 'Are you sure you want to remove this hobby?',
+      text: 'Once deleted, you will not be able to recover the hobby',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+        .then((willDelete) => {
+          if (willDelete) {
+            this.props.HobbyItems.collection.remove(docID);
+            swal('Delete successful', {
+              icon: 'success',
+            });
+          } else {
+            swal('Delete cancelled');
+          }
+        });
   }
 
   render() {

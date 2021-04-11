@@ -16,7 +16,7 @@ class NavBar extends React.Component {
           <Header as='h1'>Hobby Helper</Header>
         </Menu.Item>
         {this.props.currentUser ? (
-            [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Hobby</Menu.Item>,
+            [
               <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>Hobby List</Menu.Item>,
             ]
         ) : ''}

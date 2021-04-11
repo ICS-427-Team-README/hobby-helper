@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import HobbyList from '../pages/HobbyList';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
+import AddHobby from '../components/AddHobby';
+import EditHobby from '../components/EditHobby';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -35,8 +35,8 @@ class App extends React.Component {
               <Route path="/signout" component={Signout}/>
               <Route path="/profile" component={Profile}/>
               <ProtectedRoute path="/list" component={HobbyList}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+              <ProtectedRoute path="/add" component={AddHobby}/>
+              <ProtectedRoute path="/edit/:_id" component={EditHobby}/>
               <ProtectedRoute path="/kanban/:hobbyName" component={KanbanBoard}/>
               <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
               <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>

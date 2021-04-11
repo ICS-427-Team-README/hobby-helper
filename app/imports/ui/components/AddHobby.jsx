@@ -1,40 +1,38 @@
 import React from 'react';
-import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
+import { Grid, Header, Segment } from 'semantic-ui-react';
+import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { Stuffs } from '../../api/stuff/Stuff';
+import { UserHobbies } from '../../api/user/UserHobbies';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
-  name: String,
-  status: {
-    type: String,
-    allowedValues: ['Backlog', 'Current', 'Completed'],
-    defaultValue: 'Current',
-  },
+  hobbyName: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /** Renders the Page for adding a document. */
-class AddStuff extends React.Component {
+class AddHobby extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { name, status } = data;
+    const { hobbyName } = data;
     const owner = Meteor.user().username;
-    Stuffs.collection.insert({ name, status, owner },
-      (error) => {
-        if (error) {
-          swal('Error', error.message, 'error');
-        } else {
-          swal('Success', 'Item added successfully', 'success');
-          formRef.reset();
-        }
-      });
+    const username = owner;
+    const date = new Date();
+    const lastUpdated = (date.getMonth() + 1) + '-' + date.getDate() + '-' + (date.getFullYear());
+    UserHobbies.collection.insert({ username, hobbyName, lastUpdated },
+        (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Hobby added successfully', 'success');
+            formRef.reset();
+          }
+        });
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -43,11 +41,10 @@ class AddStuff extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Add Hobbies</Header>
+            <Header as="h2" textAlign="center">Add Hobby</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
-                <TextField name='name'/>
-                <SelectField name='status'/>
+                <TextField name='hobbyName' label='Hobby Name'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
@@ -58,4 +55,4 @@ class AddStuff extends React.Component {
   }
 }
 
-export default AddStuff;
+export default AddHobby;
