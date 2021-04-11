@@ -37,7 +37,7 @@
   ],
 
   "defaultUser": [
-    { "username": "john@foo.com", "firstName": "John", "lastName": "Foo", "description": "John Foo's profile", "privacy": true
+    { "username": "john@foo.com", "firstName": "John", "lastName": "Foo", "image": "image","description": "John Foo's profile"
     }
   ]
 }

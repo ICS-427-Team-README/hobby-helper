@@ -12,6 +12,7 @@ import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddHobby from '../components/AddHobby';
 import EditHobby from '../components/EditHobby';
 import NotFound from '../pages/NotFound';
+import AddProfile from '../pages/AddProfile';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
@@ -36,6 +37,7 @@ class App extends React.Component {
               <Route path="/profile" component={Profile}/>
               <ProtectedRoute path="/list" component={HobbyList}/>
               <ProtectedRoute path="/add" component={AddHobby}/>
+              <ProtectedRoute path="/addProfile" component={AddProfile}/>
               <ProtectedRoute path="/edit/:_id" component={EditHobby}/>
               <ProtectedRoute path="/kanban/:hobbyName" component={KanbanBoard}/>
               <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
