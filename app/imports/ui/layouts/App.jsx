@@ -43,7 +43,7 @@ class App extends React.Component {
               <ProtectedRoute path="/kanban/:hobbyName" component={KanbanBoard}/>
               <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
               <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>
-              <ProtectedRoute path="/stats/" component={Statistics}/>
+              <ProtectedRoute path="/stats/:hobbyName" component={Statistics}/>
               <ProtectedRoute path="/rating/:_id" component={EditRating}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <Route component={NotFound}/>

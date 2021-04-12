@@ -2,7 +2,7 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { NavLink, withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 import { Container, Button } from 'semantic-ui-react';
 import KanbanBoardComponent from '../components/KanbanBoard/KanbanBoardComponent';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
@@ -22,7 +22,7 @@ class KanbanBoard extends React.Component {
                       as={NavLink} activeClassName="active" exact to="/list" key='list'/>
             </Container>
             <Container style={{ display: 'flex', justifyContent: 'space-between', padding: 10 }}>
-              <p style={{ fontSize: 18, margin: 5, marginLeft: 10 }}>View Statistics</p>
+              <Link to={`/stats/${this.props.hobby}`} style={{ fontSize: 18, margin: 5, marginLeft: 10 }}>View Statistics</Link>
               <Button basic labelPosition='right' icon='add' content='Add Item' color='green'
                       style={{ height: '50%', alignSelf: 'right', marginLeft: 25 }}
                       as={NavLink} activeClassName="active" exact to="/kanbanAdd" key='kanbanAdd' />

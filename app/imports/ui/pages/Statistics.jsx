@@ -5,7 +5,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
 import StatsItem from '../components/StatsItem';
-import { UserHobbies } from '../../api/user/UserHobbies';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Statistics extends React.Component {
@@ -45,11 +44,13 @@ Statistics.propTypes = {
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-export default withTracker(({}) => {
+export default withTracker(({ match }) => {
   // Get access to Stuff documents.
+  const hobbyName = match.params.hobbyName;
   const subscription = Meteor.subscribe(HobbyItems.userPublicationName);
   return {
-    hobbyItems: HobbyItems.collection.find({}).fetch(),
+    hobby: hobbyName,
+    hobbyItems: HobbyItems.collection.find({ hobby: hobbyName }).fetch(),
     ready: subscription.ready(),
   };
 })(Statistics);
