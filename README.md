@@ -38,3 +38,26 @@ Progress:
 | Matthew Kirts | Navbar; Styling and CSS | Touch ups and improvements; Privacy settings | |
 | Eric Rivera |  | Sorting Hobby List |  |
 | Jessica Tang | Basic statistics page to display sub-hobbies and who has them saved on their hobby list | Social: Visiting functionality |  |
+
+(March 28, 2021 ~ April 11, 2021)
+## GitHub Repository: 
+- View [here](https://github.com/ics-427-team-readme/hobby-helper)
+
+## Completed Issues
+- See completed issues in [Milestone 3](https://github.com/ics-427-team-readme/hobby-helper/projects/5).
+
+## Pending Issues
+- See pending issues in the *To Do* and *In Progress* sections in [Milestone 4](https://github.com/ics-427-team-readme/hobby-helper/projects/7)
+
+Progress:
+- Landing page CSS update
+- Hobby List page improvements
+- Statistics page improvements
+- Profile page improvements
+
+| Member | New completions | Current | Next |
+| --- | --- | --- | --- |
+| Angeli Amascual | Landing page CSS update; Hobby List page improvements | Admin Functionalities |  |
+| Matthew Kirts | Profile page improvements | Profile page additions | Security Question feature |
+| Eric Rivera |  |  |  |
+| Jessica Tang | Statistics page improvements | Statistics page review features |  |
