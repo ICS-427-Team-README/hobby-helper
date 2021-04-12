@@ -1,7 +1,9 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Icon, Table } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
+
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class StatsItem extends React.Component {
@@ -11,6 +13,8 @@ class StatsItem extends React.Component {
         <Table.Row>
           <Table.Cell>{this.props.stat.name}</Table.Cell>
           <Table.Cell>{this.props.stat.hobby}</Table.Cell>
+          <Table.Cell>{this.props.stat.rating}
+            <Link to={`/rating/${this.props.stat._id}`}><Icon name='star'/></Link></Table.Cell>
         </Table.Row>
     );
   }

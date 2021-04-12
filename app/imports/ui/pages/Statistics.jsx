@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
 import StatsItem from '../components/StatsItem';
+import { UserHobbies } from '../../api/user/UserHobbies';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Statistics extends React.Component {
@@ -19,16 +20,17 @@ class Statistics extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Hobbies</Header>
+          <Header as="h2" textAlign="center">Statistics</Header>
           <Table>
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell>test statistics</Table.HeaderCell>
+                <Table.HeaderCell>Hobby Name</Table.HeaderCell>
+                <Table.HeaderCell>Hobby Category</Table.HeaderCell>
+                <Table.HeaderCell>Rating: Click Star To Edit</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
               {this.props.hobbyItems.map((stat) => <StatsItem key={stat._id} stat={stat} StatItems={HobbyItems}/>)}
-
             </Table.Body>
           </Table>
         </Container>

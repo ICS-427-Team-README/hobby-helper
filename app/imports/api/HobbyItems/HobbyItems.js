@@ -19,6 +19,11 @@ class HobbyItemsCollection {
         allowedValues: ['Backlog', 'Current', 'Completed'],
         defaultValue: 'Current',
       },
+      rating: {
+        type: String,
+        allowedValues: ['Unrated', '1', '2', '3', '4', '5'],
+        defaultValue: 'Unrated',
+      },
       description: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
