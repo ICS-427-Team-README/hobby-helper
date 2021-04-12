@@ -1,13 +1,15 @@
 import React from 'react';
-import { Image, Header, Grid, List, Button } from 'semantic-ui-react';
+import { Container, Image, Header, Grid, List, Button } from 'semantic-ui-react';
 
 /** After the user clicks the "Signout" link in the NavBar, log them out and display this page. */
 export default class Profile extends React.Component {
   render() {
 
     return (
+        <Container>
         <Grid>
             <Grid.Column width={6}>
+              {/* eslint-disable-next-line max-len */}
                 <Image src='https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80' size='medium' circular />
                 <Header as='h1'>Kelsen Reeves</Header>
                 <p>Aloha! I'm Kelsen and I enjoy various technical hobbies when I'm not working.</p>
@@ -35,6 +37,7 @@ export default class Profile extends React.Component {
                 </List>
             </Grid.Column>
         </Grid>
+        </Container>
         // <Segment placeholder>
         // <Grid columns={2} relaxed='very' stackable>
         //     <Grid.Column>

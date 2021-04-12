@@ -19,7 +19,7 @@ class HobbyList extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">List Hobbies</Header>
-              <Button basic labelPosition='right' icon='add' content='Add Hobby' color='green'
+              <Button id='addNewHobby' basic labelPosition='right' icon='add' content='Add Hobby' color='green'
                       as={NavLink} activeClassName="active" exact to="/Add" style={{ float: 'right', margin: 10 }}/>
           <Table>
             <Table.Header>
