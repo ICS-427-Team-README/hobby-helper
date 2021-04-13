@@ -55,7 +55,7 @@ export default withTracker(({ match }) => {
   const username = userAccount ? userAccount.username : '';
   const subscription = Meteor.subscribe(User.userPublicationName);
   return {
-    userInfo: User.collection.findOne({ user: username }) ? User.findOne({ user: username }) : {},
+    userInfo: User.collection.findOne({ user: username }) ? User.collection.findOne({ user: username }) : {},
     ready: subscription.ready(),
     currentUser: Meteor.user() ? Meteor.user().username : '',
     currentId: match.params._id,
