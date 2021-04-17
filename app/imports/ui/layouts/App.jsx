@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar';
 import Landing from '../pages/Landing';
 import AdminHobbyList from '../pages/Admin/AdminHobbyList';
 import AdminHobbyItemList from '../pages/Admin/AdminHobbyItemList';
+import About from '../pages/About';
 import UserList from '../pages/Admin/UserList';
 import HobbyList from '../pages/HobbyList';
 import AddHobby from '../components/AddHobby';
@@ -37,7 +38,8 @@ class App extends React.Component {
                   <Route path="/signin" component={Signin}/>
                   <Route path="/signup" component={Signup}/>
                   <Route path="/signout" component={Signout}/>
-                  <Route path="/profile" component={Profile}/>
+                  <Route path="/about" component={About}/>
+                  <ProtectedRoute path="/profile" component={Profile}/>
                   <ProtectedRoute path="/list" component={HobbyList}/>
                   <ProtectedRoute path="/add" component={AddHobby}/>
                   <ProtectedRoute path="/addProfile" component={AddProfile}/>
