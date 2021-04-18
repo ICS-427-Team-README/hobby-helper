@@ -5,10 +5,12 @@ import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
+import AdminHobbyList from '../pages/Admin/AdminHobbyList';
+import AdminHobbyItemList from '../pages/Admin/AdminHobbyItemList';
+import About from '../pages/About';
+import UserList from '../pages/Admin/UserList';
 import HobbyList from '../pages/HobbyList';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddHobby from '../components/AddHobby';
 import EditHobby from '../components/EditHobby';
 import NotFound from '../pages/NotFound';
@@ -50,6 +52,29 @@ class App extends React.Component {
               <Route component={NotFound}/>
             </Switch>
             <Footer/>
+              <div style={{ height: '100%', minHeight: '100%' }}>
+                <Switch>
+                  <Route exact path="/" component={Landing}/>
+                  <Route path="/signin" component={Signin}/>
+                  <Route path="/signup" component={Signup}/>
+                  <Route path="/signout" component={Signout}/>
+                  <Route path="/about" component={About}/>
+                  <ProtectedRoute path="/profile" component={Profile}/>
+                  <ProtectedRoute path="/list" component={HobbyList}/>
+                  <ProtectedRoute path="/add" component={AddHobby}/>
+                  <ProtectedRoute path="/addProfile" component={AddProfile}/>
+                  <ProtectedRoute path="/edit/:_id" component={EditHobby}/>
+                  <ProtectedRoute path="/kanban/:hobbyName" component={KanbanBoard}/>
+                  <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
+                  <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>
+                  <ProtectedRoute path="/stats/:hobbyName" component={Statistics}/>
+                  <ProtectedRoute path="/rating/:_id" component={EditRating}/>
+                  <AdminProtectedRoute path="/adminHobbyList" component={AdminHobbyList}/>
+                  <AdminProtectedRoute path="/adminHobbyItemList" component={AdminHobbyItemList}/>
+                  <AdminProtectedRoute path="/userList" component={UserList}/>
+                  <Route component={NotFound}/>
+                </Switch>
+              </div>
           </div>
         </Router>
     );
