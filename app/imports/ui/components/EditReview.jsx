@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
 import swal from 'sweetalert';
-import { AutoForm, ErrorsField, SelectField, SubmitField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, LongTextField, SubmitField, SelectField } from 'uniforms-semantic';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -11,13 +11,13 @@ import { HobbyItems } from '../../api/HobbyItems/HobbyItems';
 const bridge = new SimpleSchema2Bridge(HobbyItems.schema);
 
 /** Renders the Page for editing a single document. */
-class EditRating extends React.Component {
+class EditReview extends React.Component {
 
 
   /** On successful submit, insert the data. */
   submit(data) {
-    const { rating, _id } = data;
-    HobbyItems.collection.update(_id, { $set: { rating } }, (error) => (error ?
+    const { rating, review, _id } = data;
+    HobbyItems.collection.update(_id, { $set: { rating, review } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -38,6 +38,7 @@ class EditRating extends React.Component {
             <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.form}>
               <Segment>
                 <SelectField name='rating'/>
+                <LongTextField name='review'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
@@ -49,7 +50,7 @@ class EditRating extends React.Component {
 }
 
 /** Require the presence of a Stuff document in the props object. Uniforms adds 'model' to the props, which we use. */
-EditRating.propTypes = {
+EditReview.propTypes = {
   form: PropTypes.object,
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
@@ -65,4 +66,4 @@ export default withTracker(({ match }) => {
     form: HobbyItems.collection.findOne(documentId),
     ready: subscription.ready(),
   };
-})(EditRating);
+})(EditReview);

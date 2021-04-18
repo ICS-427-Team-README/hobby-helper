@@ -20,11 +20,15 @@ class HobbyItemsCollection {
         defaultValue: 'Current',
       },
       rating: {
-        type: String,
-        allowedValues: ['Unrated', '1', '2', '3', '4', '5'],
-        defaultValue: 'Unrated',
+        type: Number,
+        allowedValues: [ 0, 1, 2, 3, 4, 5],
+        defaultValue: 0,
       },
       description: String,
+      review: {
+        type: String,
+        defaultValue: 'Start Your Review',
+      },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

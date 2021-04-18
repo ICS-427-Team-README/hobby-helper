@@ -20,12 +20,12 @@ class Statistics extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Statistics</Header>
-          <Table>
+          <Table fixed>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Hobby Name</Table.HeaderCell>
-                <Table.HeaderCell>Hobby Category</Table.HeaderCell>
-                <Table.HeaderCell>Rating: Click Star To Edit</Table.HeaderCell>
+                <Table.HeaderCell>Rating</Table.HeaderCell>
+                <Table.HeaderCell>Edit Review/Rating</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
