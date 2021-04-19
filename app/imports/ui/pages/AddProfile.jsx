@@ -13,6 +13,8 @@ const formSchema = new SimpleSchema({
   lastName: String,
   description: String,
   image: String,
+  securityQuestion: String,
+  securityAnswer: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
