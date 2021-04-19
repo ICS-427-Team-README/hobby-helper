@@ -49,7 +49,7 @@ class AddProfile extends React.Component {
                 <TextField name='lastName' label='Last Name'/>
                 <TextField name='description' label='Bio'/>
                 <TextField name='securityQuestion' label='Security Question'/>
-                <TextField name='securityAnswer' label='Security Answer/>
+                <TextField name='securityAnswer' label='Security Answer'/>
                 <TextField name='image' label='Profile Image'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
