@@ -37,7 +37,7 @@
   ],
 
   "defaultUser": [
-    { "username": "john@foo.com", "firstName": "John", "lastName": "Foo", "image": "image","description": "John Foo's profile"
+    { "username": "john@foo.com", "firstName": "John", "lastName": "Foo", "description": "John Foo's profile", "email": "john@foo.com", "image": "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
     }
   ]
 }
