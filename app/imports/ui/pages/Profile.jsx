@@ -52,10 +52,9 @@ Profile.propTypes = {
 
 export default withTracker(({ match }) => {
   const userAccount = Meteor.users.findOne(match.params._id);
-  const username = userAccount ? userAccount.username : '';
   const subscription = Meteor.subscribe(User.userPublicationName);
   return {
-    userInfo: User.collection.findOne({ user: username }) ? User.collection.findOne({ user: username }) : {},
+    userInfo: User.collection.findOne({ user: userAccount }) ? User.collection.findOne({ user: userAccount }) : {},
     ready: subscription.ready(),
     currentUser: Meteor.user() ? Meteor.user().username : '',
     currentId: match.params._id,
