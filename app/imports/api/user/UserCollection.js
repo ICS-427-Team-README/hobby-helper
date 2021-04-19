@@ -19,7 +19,6 @@ class UserCollection {
       securityAnswer: String,
       image: String,
       email: String,
-      privacy: Boolean,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
