@@ -15,8 +15,6 @@ class UserCollection {
       firstName: String,
       lastName: String,
       description: String,
-      securityQuestion: String,
-      securityAnswer: String,
       image: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

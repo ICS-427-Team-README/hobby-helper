@@ -22,10 +22,10 @@ class AddProfile extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { firstName, lastName, description, image, securityQuestion, securityAnswer } = data;
+    const { firstName, lastName, description, image } = data;
     const owner = Meteor.user().username;
     const username = owner;
-    User.collection.insert({ username, firstName, lastName, description, image, securityQuestion, securityAnswer },
+    User.collection.insert({ username, firstName, lastName, description, image },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -48,8 +48,6 @@ class AddProfile extends React.Component {
                 <TextField name='firstName' label='First Name'/>
                 <TextField name='lastName' label='Last Name'/>
                 <TextField name='description' label='Bio'/>
-                <TextField name='securityQuestion' label='Security Question'/>
-                <TextField name='securityAnswer' label='Security Answer'/>
                 <TextField name='image' label='Profile Image'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>

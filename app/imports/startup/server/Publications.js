@@ -40,7 +40,7 @@ Meteor.publish(HobbyItems.userPublicationName, function () {
 Meteor.publish(User.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
-    return User.collection.find({ username: username });
+    return User.collection.find({ owner: username });
   }
   return this.ready();
 });

@@ -93,26 +93,6 @@ class Signup extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                   />
-                <Form.Input
-                    label="Security Question"
-                    id="question"
-                    icon="lock"
-                    iconPosition="left"
-                    name="seq-question"
-                    placeholder="Enter your question"
-                    type="name"
-                    onChange={this.handleChange}
-                />
-                <Form.Input
-                    label="Security Question Answer"
-                    id="answer"
-                    icon="lock"
-                    iconPosition="left"
-                    name="seq-question-ans"
-                    placeholder="Your answer"
-                    type="password"
-                    onChange={this.handleChange}
-                />
                   <Form.Field>
                     <Form.Checkbox id='signup-form-terms' label='I agree to the Terms and Conditions' />
                   </Form.Field>
