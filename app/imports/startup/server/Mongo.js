@@ -33,7 +33,7 @@ function addUser(data) {
 /** Initialize the collection if empty. */
 if (Stuffs.collection.find().count() === 0) {
   if (Meteor.settings.defaultData) {
-    console.log('Creating default data.');
+    console.log('Creating default Stuffs data.');
     Meteor.settings.defaultData.map(data => addData(data));
   }
 }
@@ -41,7 +41,7 @@ if (Stuffs.collection.find().count() === 0) {
 /** Initialize the collection if empty. */
 if (UserHobbies.collection.find().count() === 0) {
   if (Meteor.settings.defaultHobby) {
-    console.log('Creating default data.');
+    console.log('Creating default UserHobbies.');
     Meteor.settings.defaultHobby.map(data => addHobby(data));
   }
 }
@@ -49,7 +49,7 @@ if (UserHobbies.collection.find().count() === 0) {
 /** Initialize the collection if empty. */
 if (HobbyItems.collection.find().count() === 0) {
   if (Meteor.settings.defaultHobbyItems) {
-    console.log('Creating default data.');
+    console.log('Creating default HobbyItems.');
     Meteor.settings.defaultHobbyItems.map(data => addHobbyItems(data));
   }
 }
@@ -57,7 +57,7 @@ if (HobbyItems.collection.find().count() === 0) {
 /** Initialize the collection if empty. */
 if (User.collection.find().count() === 0) {
   if (Meteor.settings.defaultUser) {
-    console.log('Creating default data.');
+    console.log('Creating default UserInfo.');
     Meteor.settings.defaultUser.map(data => addUser(data));
   }
 }
