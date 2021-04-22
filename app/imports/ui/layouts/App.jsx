@@ -24,6 +24,7 @@ import KanbanItemEdit from '../components/KanbanBoard/KanbanItemEdit';
 import Profile from '../pages/Profile';
 import Statistics from '../pages/Statistics';
 import EditReview from '../components/EditReview';
+import EditProfile from '../pages/EditProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,26 +33,6 @@ class App extends React.Component {
         <Router>
           <div>
             <NavBar/>
-            <Switch>
-              <Route exact path="/" component={Landing}/>
-              <Route path="/signin" component={Signin}/>
-              <Route path="/signup" component={Signup}/>
-              <Route path="/signout" component={Signout}/>
-              <Route path="/profile" component={Profile}/>
-              <ProtectedRoute path="/list" component={HobbyList}/>
-              <ProtectedRoute path="/add" component={AddHobby}/>
-              <ProtectedRoute path="/addProfile" component={AddProfile}/>
-              <ProtectedRoute path="/edit/:_id" component={EditHobby}/>
-              <ProtectedRoute path="/kanban/:hobbyName" component={KanbanBoard}/>
-              <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
-              <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>
-              <ProtectedRoute path="/stats/:hobbyName" component={Statistics}/>
-              <ProtectedRoute path="/stats/" component={Statistics}/>
-              <ProtectedRoute path="/review/:_id" component={EditReview}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
-              <Route component={NotFound}/>
-            </Switch>
-            <Footer/>
               <div style={{ height: '100%', minHeight: '100%' }}>
                 <Switch>
                   <Route exact path="/" component={Landing}/>
@@ -60,6 +41,7 @@ class App extends React.Component {
                   <Route path="/signout" component={Signout}/>
                   <Route path="/about" component={About}/>
                   <ProtectedRoute path="/profile" component={Profile}/>
+                  <ProtectedRoute path="/EditProfile" component={EditProfile}/>
                   <ProtectedRoute path="/list" component={HobbyList}/>
                   <ProtectedRoute path="/add" component={AddHobby}/>
                   <ProtectedRoute path="/addProfile" component={AddProfile}/>
@@ -68,7 +50,7 @@ class App extends React.Component {
                   <ProtectedRoute path="/kanbanAdd" component={KanbanItemAdd}/>
                   <ProtectedRoute path="/kanbanEdit/:_id" component={KanbanItemEdit}/>
                   <ProtectedRoute path="/stats/:hobbyName" component={Statistics}/>
-                  <ProtectedRoute path="/rating/:_id" component={EditRating}/>
+                  <ProtectedRoute path="/review/:_id" component={EditReview}/>
                   <AdminProtectedRoute path="/adminHobbyList" component={AdminHobbyList}/>
                   <AdminProtectedRoute path="/adminHobbyItemList" component={AdminHobbyItemList}/>
                   <AdminProtectedRoute path="/userList" component={UserList}/>

@@ -8,12 +8,19 @@ import { TextField, LongTextField, SubmitField, ErrorsField } from 'uniforms-sem
 import { User } from '../../api/user/UserCollection';
 
 class EditProfile extends React.Component {
-  submit(data) {
-    const { username, firstName, lastName, image, description, _id } = data;
-    User.update(_id, { $set: { username, firstName, lastName, image, description } }, (error) => (error ?
-            swal('Error', error.message, 'error') :
-            swal('Success', 'Item updated successfully', 'success')));
-  }
+    submit(data) {
+        const { firstName, lastName, description, image, securityQuestion, securityAnswer } = data;
+        const owner = Meteor.user().username;
+        const username = owner;
+        User.collection.insert({ username, firstName, lastName, description, image, securityQuestion, securityAnswer },
+            (error) => {
+                if (error) {
+                    swal('Error', error.message, 'error');
+                } else {
+                    swal('Success', 'Profile Updated Successfully', 'success');
+                }
+            });
+    }
 
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data, please standby...</Loader>;
