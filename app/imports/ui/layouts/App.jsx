@@ -25,6 +25,7 @@ import Profile from '../pages/Profile';
 import Statistics from '../pages/Statistics';
 import EditReview from '../components/EditReview';
 import EditProfile from '../pages/EditProfile';
+import Security from '../pages/Security';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -40,6 +41,7 @@ class App extends React.Component {
                   <Route path="/signup" component={Signup}/>
                   <Route path="/signout" component={Signout}/>
                   <Route path="/about" component={About}/>
+                  <Route path="/Security" component={Security}/>
                   <ProtectedRoute path="/profile" component={Profile}/>
                   <ProtectedRoute path="/EditProfile/:_id" component={EditProfile}/>
                   <ProtectedRoute path="/list" component={HobbyList}/>

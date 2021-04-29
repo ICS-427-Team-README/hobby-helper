@@ -74,6 +74,9 @@ export default class Signin extends React.Component {
               </Segment>
             </Form>
             <Message>
+              Forgot your password? Click <Link to="/Security">here</Link>
+            </Message>
+            <Message>
               <Link to="/signup">Click here to Register</Link>
             </Message>
             {this.state.error === '' ? (

@@ -11,7 +11,7 @@ class UserList extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   render() {
-
+    console.log(this.props.userItems);
     return (
         <Container>
           <Header as="h2" textAlign="center">List of Users</Header>
