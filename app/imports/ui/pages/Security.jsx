@@ -74,7 +74,7 @@ class Security extends React.Component {
           <Grid.Column>
             <AutoForm schema={bridge3} onSubmit={data => this.newpassword(data)} >
               <Segment>
-                <TextField name='password' label='New Password'/>
+                <TextField icon="lock" iconLeft type="password" name='password' label='New Password'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
