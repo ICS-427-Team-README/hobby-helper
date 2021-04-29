@@ -1,65 +1,71 @@
 import React from 'react';
-import { Loader, Grid, Header, Segment } from 'semantic-ui-react';
+import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
 import swal from 'sweetalert';
+import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
+import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Meteor } from 'meteor/meteor';
-import { TextField, LongTextField, SubmitField, ErrorsField } from 'uniforms-semantic';
+import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { User } from '../../api/user/UserCollection';
+import { UserHobbies } from '../../api/user/UserHobbies';
 
+const bridge = new SimpleSchema2Bridge(User.schema);
+
+/** Renders the Page for editing a single document. */
 class EditProfile extends React.Component {
-    submit(data) {
-        const { firstName, lastName, description, image, securityQuestion, securityAnswer } = data;
-        const owner = Meteor.user().username;
-        const username = owner;
-        User.collection.insert({ username, firstName, lastName, description, image, securityQuestion, securityAnswer },
-            (error) => {
-                if (error) {
-                    swal('Error', error.message, 'error');
-                } else {
-                    swal('Success', 'Profile Updated Successfully', 'success');
-                }
-            });
-    }
 
-  render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data, please standby...</Loader>;
+  /** On successful submit, insert the data. */
+  submit(data) {
+    const { firstName, lastName, description, securityQuestion, securityAnswer, image, _id } = data;
+    User.collection.update(_id, { $set: { firstName, lastName, description, securityQuestion, securityAnswer, image } }, (error) => (error ?
+        swal('Error', error.message, 'error') :
+        swal('Success', 'Item updated successfully', 'success')));
   }
 
+  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
+  render() {
+    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+  }
+
+  /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   renderPage() {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlilgn="center" inverted>Edit Profile</Header>
-            <Segment>
-              <TextField name='username'/>
-              <TextField name='firstName'/>
-              <TextField name='lastName'/>
-              <TextField name='image'/>
-              <TextField name='email'/>
-              <LongTextField name='description'/>
-              <SubmitField value='Submit'/>
-              <ErrorsField/>
-            </Segment>
+            <Header as="h2" textAlign="center">Edit Profile</Header>
+            <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
+              <Segment>
+                <TextField name='firstName' label='First Name'/>
+                <TextField name='lastName' label='Last Name'/>
+                <TextField name='description' label='Description'/>
+                <TextField name='securityQuestion' label='Security Question'/>
+                <TextField name='securityAnswer' label='Security Answer'/>
+                <TextField name='image' label='Image URL Link'/>
+                <SubmitField value='Submit'/>
+                <ErrorsField/>
+              </Segment>
+            </AutoForm>
           </Grid.Column>
         </Grid>
     );
   }
 }
 
+/** Require the presence of a Stuff document in the props object. Uniforms adds 'model' to the props, which we use. */
 EditProfile.propTypes = {
   doc: PropTypes.object,
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
 };
 
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(({ match }) => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
-  const userAccount = Meteor.users.findOne(match.params._id);
-  const userName = userAccount ? userAccount.username : '';
-  const subscription = Meteor.subscribe('UserInfo');
+  const documentId = match.params._id;
+  // Get access to Stuff documents.
+  const subscription = Meteor.subscribe(User.userPublicationName);
   return {
-    doc: User.findOne({ user: userName }) ? User.findOne({ user: userName }) : {},
+    doc: User.collection.findOne(documentId),
     ready: subscription.ready(),
   };
 })(EditProfile);

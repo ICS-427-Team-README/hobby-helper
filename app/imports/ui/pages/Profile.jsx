@@ -14,6 +14,7 @@ class Profile extends React.Component {
   }
 
   renderPage() {
+    console.log(this.props.currentUser);
     return (
         <Container>
           <Segment>
@@ -24,7 +25,7 @@ class Profile extends React.Component {
                             onError={(i) => i.target.src = '/images/default_image.png'}/>
                 <Item.Content>
                   {this.props.currentUser === '' ? (<Button floated='right'><Icon name='lock'/></Button>) : (
-                      <Button as={NavLink} exact to={`/EditProfile/${this.props.currentId}`} floated='right'>
+                      <Button basic color='green' as={NavLink} exact to={`/EditProfile/${this.props.userInfo._id}`} floated='right'>
                         <Icon name='left chevron'/>Edit Profile
                       </Button>
                   )}
