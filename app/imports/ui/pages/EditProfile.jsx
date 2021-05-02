@@ -7,7 +7,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { User } from '../../api/user/UserCollection';
-import { UserHobbies } from '../../api/user/UserHobbies';
 
 const bridge = new SimpleSchema2Bridge(User.schema);
 

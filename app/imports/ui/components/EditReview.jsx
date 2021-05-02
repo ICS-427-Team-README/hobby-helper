@@ -13,7 +13,6 @@ const bridge = new SimpleSchema2Bridge(HobbyItems.schema);
 /** Renders the Page for editing a single document. */
 class EditReview extends React.Component {
 
-
   /** On successful submit, insert the data. */
   submit(data) {
     const { rating, review, _id } = data;

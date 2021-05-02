@@ -16,6 +16,7 @@ class Landing extends React.Component {
                 <Grid.Column style={{ padding: 45 }}>
                   <h2>Simple And Easy Kanban Board UI</h2>
                   <div style={{ border: 'solid' }}/>
+                  {/* eslint-disable-next-line max-len,react/no-unescaped-entities */}
                   <p style={{ marginTop: 10 }}>Use 3 different columns to filter items according to their current status. When an items' status changes, simply move them to the corresponding column.</p>
                 </Grid.Column>
                 <Grid.Column style={{ padding: 45 }}>

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Accounts } from 'meteor/accounts-base';
-import { Container, Grid, Loader, Header, Segment } from 'semantic-ui-react';
+import { Container, Grid, Segment } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
-import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
 import { Meteor } from 'meteor/meteor';
 import { withRouter } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -119,6 +118,7 @@ class Security extends React.Component {
     Meteor.call('newPass', {
       _id: account[0]._id,
       newPassword: password,
+      // eslint-disable-next-line no-unused-vars
     }, (err, res) => {
       if (err) {
         console.log(err);

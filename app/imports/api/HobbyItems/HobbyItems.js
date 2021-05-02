@@ -21,7 +21,7 @@ class HobbyItemsCollection {
       },
       rating: {
         type: Number,
-        allowedValues: [ 0, 1, 2, 3, 4, 5],
+        allowedValues: [0, 1, 2, 3, 4, 5],
         defaultValue: 0,
       },
       description: String,

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { NavLink } from 'react-router-dom';
-import { Container, Table, Header, Button } from 'semantic-ui-react';
+import { Container, Table, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { HobbyItems } from '../../../api/HobbyItems/HobbyItems';

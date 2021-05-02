@@ -1,8 +1,8 @@
 import React from 'react';
-import { Table, Button, Icon, Tab } from 'semantic-ui-react';
+import { Table, Button, Icon } from 'semantic-ui-react';
 import swal from 'sweetalert';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class AdminHobbyListItem extends React.Component {

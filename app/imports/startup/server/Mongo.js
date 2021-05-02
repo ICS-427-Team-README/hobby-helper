@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-import { Accounts } from 'meteor/accounts-base'
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { UserHobbies } from '../../api/user/UserHobbies';
 import { HobbyItems } from '../../api/HobbyItems/HobbyItems.js';

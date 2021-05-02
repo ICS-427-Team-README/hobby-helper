@@ -26,6 +26,7 @@ class AddHobby extends React.Component {
       const owner = Meteor.user().username;
       const username = owner;
       const date = new Date();
+      // eslint-disable-next-line
       const lastUpdated = (date.getMonth() + 1) + '-' + date.getDate() + '-' + (date.getFullYear());
       UserHobbies.collection.insert({ username, hobbyName, lastUpdated },
           (error) => {
