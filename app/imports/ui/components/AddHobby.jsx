@@ -20,19 +20,23 @@ class AddHobby extends React.Component {
   /** On submit, insert the data. */
   submit(data, formRef) {
     const { hobbyName } = data;
-    const owner = Meteor.user().username;
-    const username = owner;
-    const date = new Date();
-    const lastUpdated = (date.getMonth() + 1) + '-' + date.getDate() + '-' + (date.getFullYear());
-    UserHobbies.collection.insert({ username, hobbyName, lastUpdated },
-        (error) => {
-          if (error) {
-            swal('Error', error.message, 'error');
-          } else {
-            swal('Success', 'Hobby added successfully', 'success');
-            formRef.reset();
-          }
-        });
+    if (hobbyName.length > 30) {
+      swal('Error', 'Hobby name is too long', 'error');
+    } else {
+      const owner = Meteor.user().username;
+      const username = owner;
+      const date = new Date();
+      const lastUpdated = (date.getMonth() + 1) + '-' + date.getDate() + '-' + (date.getFullYear());
+      UserHobbies.collection.insert({ username, hobbyName, lastUpdated },
+          (error) => {
+            if (error) {
+              swal('Error', error.message, 'error');
+            } else {
+              swal('Success', 'Hobby added successfully', 'success');
+              formRef.reset();
+            }
+          });
+    }
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */

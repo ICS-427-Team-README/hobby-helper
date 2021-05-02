@@ -13,6 +13,8 @@ const formSchema = new SimpleSchema({
   lastName: String,
   description: String,
   image: String,
+  securityQuestion: String,
+  securityAnswer: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -25,15 +27,20 @@ class AddProfile extends React.Component {
     const { firstName, lastName, description, image, securityQuestion, securityAnswer } = data;
     const owner = Meteor.user().username;
     const username = owner;
-    User.collection.insert({ username, firstName, lastName, description, image, securityQuestion, securityAnswer },
-        (error) => {
-          if (error) {
-            swal('Error', error.message, 'error');
-          } else {
-            swal('Success', 'Profile created successfully', 'success');
-            formRef.reset();
-          }
-        });
+    const number = /\d/;
+    if (number.test(firstName) || number.test(lastName)) {
+      swal('Error', 'Please do not put numbers in your first or last name.', 'error');
+    } else {
+      User.collection.insert({ username, firstName, lastName, description, image, securityQuestion, securityAnswer },
+          (error) => {
+            if (error) {
+              swal('Error', error.message, 'error');
+            } else {
+              swal('Success', 'Profile created successfully', 'success');
+              formRef.reset();
+            }
+          });
+    }
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
