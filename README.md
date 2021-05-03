@@ -61,3 +61,37 @@ Progress:
 | Matthew Kirts | Profile page improvements | Profile page additions | Security Question feature |
 | Eric Rivera |  |  |  |
 | Jessica Tang | Statistics page improvements | Statistics page review features |  |
+
+April 12, 2021 ~ May 2, 2021)
+## GitHub Repository: 
+- View [here](https://github.com/ics-427-team-readme/hobby-helper)
+
+## Final Project Documentation File
+- View [here](https://github.com/ics-427-team-readme/hobby-helper/blob/7fdee35ff7393ad51a513594fedfdf6e8fa4bd78/Hobby%20Helper%20Documentation.pdf)
+
+## Release Version: 
+- View version 1.0 [here](https://github.com/ics-427-team-readme/hobby-helper/releases/tag/1.0)
+
+
+## Hobby Helper Wiki: 
+- View wiki [here](https://github.com/ics-427-team-readme/hobby-helper/wiki)
+
+## Project Duties
+
+### Last Additions for Last Part of Project:
+Matthew Kirts and Angeli Amascual finished the profile page functionality. Angeli also completed the admin functionalities and security question/answer feature. 
+
+### Technical Notes
+Hobby Helper is a web application built with ReactJS, Meteor, and MongoDB. In order to run this web application you can download release version 1.0 from the following link: https://github.com/ics-427-team-readme/hobby-helper/releases/tag/1.0. It will give you the option of either downloading the .zip or .tar.gz file. Either option works and once the download is complete then extract the files. Afterwards, open up the command prompt on your computer and move to the directory where the extracted files are located. This can be done using the “cd” command. After reaching the directory, “cd” once more into the “app” directory. From here, enter the command “meteor npm run start” to start running the application. Enter “http://localhost:3000/” on your desired web browser to view Hobby Helper’s landing page. In order to exit this application, enter “CTRL C” on your command prompt and close the web browser’s window containing Hobby Helper. There are no specific requirements in order to run Hobby Helper besides having a computer and web browser installed.
+
+### Closing Thoughts/Developer Notes
+
+### Angeli Amascual
+
+### Matthew Kirts
+This was a fun project that the entire group enjoyed working on. Looking back on things, I wish that we could have expanded upon some features. Due to COVID-19 and stay-at-home orders, however, this was difficult for not just myself and my group, but for everyone else.
+One big surprise was that despite the simplicity of the idea, it helped lay the ground work for a potential social-focused/related application. There are some gaps that needs to be filled in, though these are all mostly social related (i.e. visiting another users profile, a message board, etc.). Regarding disappointments, there weren't that many. I wish that I could have contributed more to the project and implement additional features.
+Overall, though, this was a project that I enjoyed working on and would love to continue adding onto it in the future.
+
+### Jessica Tang
+Even though COVID was a big change to the semester it was still fun working together on a project with others. Some of the aspects for the program were really nice and I got to learn a lot of things from my groups! The only few things I wish is that we were able to add more features, but for what’s it’s worth I think it works well. I’m glad to have worked with these wonderful people!
