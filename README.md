@@ -96,3 +96,7 @@ Overall, though, this was a project that I enjoyed working on and would love to 
 
 ### Jessica Tang
 Even though COVID was a big change to the semester it was still fun working together on a project with others. Some of the aspects for the program were really nice and I got to learn a lot of things from my groups! The only few things I wish is that we were able to add more features, but for what’s it’s worth I think it works well. I’m glad to have worked with these wonderful people!
+
+### Eric Rivera
+This project in a sentence? A purposeful web app with an emphesis on secure development. Aside from the technical challenges of implimentation and documentation, I experienced personal and logistical issues related to COVID. I am thankful to have had the opportunity to learn and grow with my fellow team members who were able to fill in the gaps. As with many of my previous projects, the surprises often occured in elements of project timeline management. Estimating the time required to overcome never before seen issues (like dynamic analysis tools) is challenging. I'm proud of this project as being my first mostly-asynchronous team, and also my first endeavers in secure development.
+
