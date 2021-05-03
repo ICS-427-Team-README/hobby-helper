@@ -87,6 +87,8 @@ Hobby Helper is a web application built with ReactJS, Meteor, and MongoDB. In or
 ### Closing Thoughts/Developer Notes
 
 ### Angeli Amascual
+the challenges, surprises, important achievements you are proud of(if there are any you want to highlight), disappointments(if any),  disclaimers/caveats etc
+Overall, working on Hobby Helper with my fellow team members was a very interesting and educational experience. Due to COVID-19 and our class' solely online format we were only able to communicate through online platforms such as Slack and Zoom. I think that communication through Slack was very easy to use and for the most part we were able to contact each other and receive responses within an adequate amount of time. A challenge that we all faced I believe was concerning our dynamic analysis tool, Iroh.js. It led to a lot of frustrations while trying to get it to set-up and work properly. In particular I am quite proud of how the Kanban Board page turned out. Since I worked on most of the code for it I am happy that it was able to turn out well. However, I am slightly disappointed that we weren't able to get the drag and drop function working due to its complexity and our time limits.
 
 ### Matthew Kirts
 This was a fun project that the entire group enjoyed working on. Looking back on things, I wish that we could have expanded upon some features. Due to COVID-19 and stay-at-home orders, however, this was difficult for not just myself and my group, but for everyone else.
